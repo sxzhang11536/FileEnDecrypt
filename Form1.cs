@@ -34,8 +34,6 @@ namespace Lab7
 
         private void button3_Click(object sender, EventArgs e)  //open file button
         {
-            //int size = -1;
-            //Stream myStream = null;
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
             openFileDialog1.InitialDirectory = "c:\\";
             openFileDialog1.FileName = "openFileDialog1";
@@ -126,7 +124,6 @@ namespace Lab7
                 }
                 catch (Exception ex)
                 {
-                    //MessageBox.Show("Error: Could not read file from disk. Original error: " + ex.Message);
                     MessageBox.Show("Could not open source or destination file.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); 
                 }
             }
@@ -205,7 +202,6 @@ namespace Lab7
                         }
                         catch (Exception ex)
                         {
-                            //MessageBox.Show("Error: Could not read file from disk. Original error: " + ex.Message);
                             MessageBox.Show("Could not open source or destination file.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
