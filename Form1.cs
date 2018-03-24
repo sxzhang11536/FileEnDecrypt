@@ -41,22 +41,6 @@ namespace Lab7
             if (openFileDialog1.ShowDialog()==DialogResult.OK)
             {
                 textBox1.Text = openFileDialog1.FileName;
-                //try
-                //{
-                    //string text = File.ReadAllText(file);
-                    //size = text.Length;
-                 //   if ((myStream=openFileDialog1.OpenFile())!=null)
-                 //   {
-                 //       using (myStream)
-                 //       {
-                 //
-                 //       }
-                 //   }
-                //}
-                //catch(Exception ex)
-                //{
-                 //   MessageBox.Show("Error: Could not read file from disk. Original error: " + ex.Message);
-                //}
             }
             else
             {
@@ -66,13 +50,10 @@ namespace Lab7
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            //this.textBox1.Text = openFileDialog1.FileName;
         }
 
         private void button1_Click(object sender, EventArgs e)  //encrypt
         {
-            
-            //Stream myStream = null;
             if ((textBox2.Text == "")&&(textBox1.Text==""))
             {
                 MessageBox.Show("Please enter a key.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -101,8 +82,6 @@ namespace Lab7
                 }
                 try
                 {
-                    //if (openFileDialog1.OpenFile() != null)
-                    //{
                         buff = File.ReadAllBytes(textBox1.Text);
                         for (int i = 0; i < buff.Length; i++)
                         {
@@ -120,7 +99,6 @@ namespace Lab7
                         }
                         MessageBox.Show("Operation completed successfully.");
                         return;
-                    //}
                 }
                 catch (Exception ex)
                 {
@@ -180,8 +158,6 @@ namespace Lab7
                         }
                         try
                         {
-                            //if (openFileDialog1.OpenFile() != null)
-                            //{
                             buff = File.ReadAllBytes(textBox1.Text);
                             for (int i = 0; i < buff.Length; i++)
                             {
@@ -198,7 +174,6 @@ namespace Lab7
                             }
                             MessageBox.Show("Operation completed successfully.");
                             return;
-                            //}
                         }
                         catch (Exception ex)
                         {
